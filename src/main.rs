@@ -28,6 +28,7 @@ fn main() {
         Scalar::from(5u8),
     ];
 
+    // can be arbitrary point in a subgroup, but equal for all participants
     let PEDERSEN_BASE_POINT =
         &Scalar::from_bytes_mod_order(PREFIX) * &constants::ED25519_BASEPOINT_TABLE;
 
