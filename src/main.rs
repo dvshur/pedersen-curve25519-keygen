@@ -15,8 +15,6 @@ const N: usize = 5;
 // Threshold
 const T: usize = 3;
 
-const PREFIX: [u8; 32] = [255u8; 32];
-
 #[allow(non_snake_case)]
 fn main() {
     // Parties indexes
@@ -30,7 +28,7 @@ fn main() {
 
     // can be arbitrary point in a subgroup, but equal for all participants
     let PEDERSEN_BASE_POINT =
-        &Scalar::from_bytes_mod_order(PREFIX) * &constants::ED25519_BASEPOINT_TABLE;
+        &Scalar::from_bytes_mod_order([255u8; 32]) * &constants::ED25519_BASEPOINT_TABLE;
 
     let mut csprng = rand::thread_rng();
 
