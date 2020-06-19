@@ -127,6 +127,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2839e79665f131bdb5782e51f2c6c9599c133c6098982a54c794358bf432529c"
 
 [[package]]
+name = "pedersen-secret-share"
+version = "0.1.0"
+dependencies = [
+ "curve25519-dalek",
+ "digest",
+ "ed25519-dalek",
+ "rand",
+]
+
+[[package]]
 name = "ppv-lite86"
 version = "0.2.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -190,16 +200,6 @@ name = "subtle"
 version = "2.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "502d53007c02d7605a05df1c1a73ee436952781653da5d0bf57ad608f66932c1"
-
-[[package]]
-name = "threshold"
-version = "0.1.0"
-dependencies = [
- "curve25519-dalek",
- "digest",
- "ed25519-dalek",
- "rand",
-]
 
 [[package]]
 name = "typenum"

@@ -1,5 +1,5 @@
 [package]
-name = "threshold"
+name = "pedersen-secret-share"
 version = "0.1.0"
 authors = ["Dmitry Shuranov <dvshur@gmail.com>"]
 edition = "2018"

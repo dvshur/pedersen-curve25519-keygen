@@ -2,8 +2,9 @@ use crate::pow::Pow;
 use curve25519_dalek::scalar::Scalar;
 use rand::{CryptoRng, RngCore};
 
+#[derive(Debug, Clone)]
 pub struct Polynom {
-    coeffs: Vec<Scalar>,
+    pub coeffs: Vec<Scalar>,
 }
 
 impl Polynom {
@@ -27,5 +28,13 @@ impl Polynom {
             res += c * x.pow(i as u64);
         }
         res
+    }
+}
+
+impl Default for Polynom {
+    fn default() -> Self {
+        Polynom {
+            coeffs: Vec::with_capacity(0),
+        }
     }
 }
