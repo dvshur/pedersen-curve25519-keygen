@@ -15,7 +15,7 @@ impl Polynom {
 
         p.coeffs.push(zero_coeff.clone());
 
-        for _ in 1..order {
+        for _ in 1..(order + 1) {
             p.coeffs.push(Scalar::random(rng));
         }
 

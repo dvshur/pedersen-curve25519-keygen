@@ -1,3 +1,5 @@
+#![allow(non_snake_case)]
+
 mod polynom;
 mod pow;
 
@@ -88,7 +90,7 @@ fn main() {
             arr[i][0] = key_pairs[i].1
         }
         for i in 0..N {
-            for j in 1..(T - 1) {
+            for j in 1..T {
                 arr[i][j] = &polynoms[i].coeffs[j] * &constants::ED25519_BASEPOINT_TABLE;
             }
         }
